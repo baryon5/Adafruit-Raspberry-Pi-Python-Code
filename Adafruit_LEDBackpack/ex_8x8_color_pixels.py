@@ -9,7 +9,7 @@ from Adafruit_8x8 import ColorEightByEight
 # ===========================================================================
 grid = ColorEightByEight(address=0x70)
 
-print "Press CTRL+Z to exit"
+print("Press CTRL+Z to exit")
 
 iter = 0
 

@@ -13,5 +13,5 @@ vcnl = VCNL4000(0x13)
 # Print proximity sensor data every 100 ms
 while True:
 	
-	print "Data from proximity sensor", vcnl.read_proximity()
+	print("Data from proximity sensor", vcnl.read_proximity())
 	time.sleep(0.1)

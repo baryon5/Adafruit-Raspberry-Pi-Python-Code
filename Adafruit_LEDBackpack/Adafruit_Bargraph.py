@@ -24,7 +24,7 @@ class Bargraph:
     self.debug = debug
 
     if self.debug:
-      print "Initializing a new instance of LEDBackpack at 0x%02X" % address
+      print("Initializing a new instance of LEDBackpack at 0x%02X" % address)
     self.disp = LEDBackpack(address=address, debug=debug)
 
   def setLed(self, bar, color):
@@ -43,7 +43,7 @@ class Bargraph:
       a += 4;
     
     if self.debug:
-      print "Ano = %d Cath %d" % (a, c)
+      print("Ano = %d Cath %d" % (a, c))
 
     bufRow = self.disp.getBufferRow(c) & ~((1 << a) | (1 << (a+8))) # turn off the LED
 

@@ -18,6 +18,12 @@ Adafruit's Raspberry-Pi Python Code Library
 git clone https://github.com/adafruit/Adafruit-Raspberry-Pi-Python-Code.git
 ```
 
+Modifications
+============
+
+2to3-3.4 ran on all the code, I will update modules to work with Python 3
+additionally if necessary.
+
 ============
 Copyright (c) 2012-2013 Limor Fried, Kevin Townsend and Mikey Sklar for Adafruit Industries.
 All rights reserved.

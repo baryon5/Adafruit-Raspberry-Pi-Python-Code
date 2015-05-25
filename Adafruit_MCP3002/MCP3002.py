@@ -84,11 +84,11 @@ GPIO.setup(SPICS, GPIO.OUT)
 # a RTOS - reading the ADC takes about 30 ms (~30 samples per second)
 # which is awful for a microcontroller but better-than-nothing for Linux
 
-print "| #0 \t #1|"
-print "-----------------------------------------------------------------"
+print("| #0 \t #1|")
+print("-----------------------------------------------------------------")
 while True:
-	print "|",
+	print("|", end=' ')
 	for adcnum in range(2):
 		ret = readadc(adcnum, SPICLK, SPIMOSI, SPIMISO, SPICS)
-		print ret,"\t",
-	print "|"
+		print(ret,"\t", end=' ')
+	print("|")

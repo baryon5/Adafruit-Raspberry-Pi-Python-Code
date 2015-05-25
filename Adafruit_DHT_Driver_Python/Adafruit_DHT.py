@@ -12,8 +12,8 @@ AM2302 = 22
 dhtreader.init()
 
 if len(sys.argv) != 3:
-    print("usage: {0} [11|22|2302] GPIOpin#".format(sys.argv[0]))
-    print("example: {0} 2302 Read from an AM2302 connected to GPIO #4".format(sys.argv[0]))
+    print(("usage: {0} [11|22|2302] GPIOpin#".format(sys.argv[0])))
+    print(("example: {0} 2302 Read from an AM2302 connected to GPIO #4".format(sys.argv[0])))
     sys.exit(2)
 
 dev_type = None
@@ -32,9 +32,9 @@ if dhtpin <= 0:
     print("invalid GPIO pin#")
     sys.exit(3)
 
-print("using pin #{0}".format(dhtpin))
+print(("using pin #{0}".format(dhtpin)))
 t, h = dhtreader.read(dev_type, dhtpin)
 if t and h:
-    print("Temp = {0} *C, Hum = {1} %".format(t, h))
+    print(("Temp = {0} *C, Hum = {1} %".format(t, h)))
 else:
     print("Failed to read from sensor, maybe try again?")

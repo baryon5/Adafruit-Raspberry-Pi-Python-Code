@@ -9,7 +9,7 @@ from Adafruit_8x8 import EightByEight
 # ===========================================================================
 grid = EightByEight(address=0x70)
 
-print "Press CTRL+Z to exit"
+print("Press CTRL+Z to exit")
 
 # Continually update the 8x8 display one pixel at a time
 while(True):

@@ -25,7 +25,7 @@ spreadsheet = 'SpreadsheetName'
 try:
   gc = gspread.login(email, password)
 except:
-  print "Unable to log in.  Check your email address/password"
+  print("Unable to log in.  Check your email address/password")
   sys.exit()
 
 # Open a worksheet from your spreadsheet using the filename
@@ -34,7 +34,7 @@ try:
   # Alternatively, open a spreadsheet using the spreadsheet's key
   # worksheet = gc.open_by_key('0BmgG6nO_6dprdS1MN3d3MkdPa142WFRrdnRRUWl1UFE').sheet1
 except:
-  print "Unable to open the spreadsheet.  Check your filename: %s" % spreadsheet
+  print("Unable to open the spreadsheet.  Check your filename: %s" % spreadsheet)
   sys.exit()
 
 # Continuously append data
@@ -42,7 +42,7 @@ while(True):
   # Run the DHT program to get the humidity and temperature readings!
 
   output = subprocess.check_output(["./Adafruit_DHT", "2302", "4"]);
-  print output
+  print(output)
   matches = re.search("Temp =\s+([0-9.]+)", output)
   if (not matches):
 	time.sleep(3)
@@ -56,17 +56,17 @@ while(True):
 	continue
   humidity = float(matches.group(1))
 
-  print "Temperature: %.1f C" % temp
-  print "Humidity:    %.1f %%" % humidity
+  print("Temperature: %.1f C" % temp)
+  print("Humidity:    %.1f %%" % humidity)
  
   # Append the data in the spreadsheet, including a timestamp
   try:
     values = [datetime.datetime.now(), temp, humidity]
     worksheet.append_row(values)
   except:
-    print "Unable to append data.  Check your connection?"
+    print("Unable to append data.  Check your connection?")
     sys.exit()
 
   # Wait 30 seconds before continuing
-  print "Wrote a row to %s" % spreadsheet
+  print("Wrote a row to %s" % spreadsheet)
   time.sleep(30)

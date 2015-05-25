@@ -9,7 +9,7 @@ from Adafruit_7Segment import SevenSegment
 # ===========================================================================
 segment = SevenSegment(address=0x70)
 
-print "Press CTRL+Z to exit"
+print("Press CTRL+Z to exit")
 
 # Continually update the time on a 4 char, 7-segment display
 while(True):

@@ -149,10 +149,10 @@ DACLookup_FullSine_5Bit = \
 dac = MCP4725(0x62)
 
 if (DAC_RESOLUTION < 5) | (DAC_RESOLUTION > 9):
-  print "Invalid DAC resolution: Set DAC_RESOLUTION from 5..9"
+  print("Invalid DAC resolution: Set DAC_RESOLUTION from 5..9")
 else:
-  print "Generating a sine wave with %d-bit resolution" % DAC_RESOLUTION
-  print "Press CTRL+C to stop"
+  print("Generating a sine wave with %d-bit resolution" % DAC_RESOLUTION)
+  print("Press CTRL+C to stop")
   while(True):
     if (DAC_RESOLUTION == 9):
       for val in DACLookup_FullSine_9Bit:

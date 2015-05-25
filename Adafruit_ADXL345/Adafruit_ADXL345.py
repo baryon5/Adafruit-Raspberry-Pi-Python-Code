@@ -108,7 +108,7 @@ if __name__ == '__main__':
 
     accel = Adafruit_ADXL345()
 
-    print '[Accelerometer X, Y, Z]'
+    print('[Accelerometer X, Y, Z]')
     while True:
-        print accel.read()
+        print(accel.read())
         sleep(1) # Output is fun to watch if this is commented out

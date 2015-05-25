@@ -14,7 +14,7 @@ class EightByEight:
   # Constructor
   def __init__(self, address=0x70, debug=False):
     if (debug):
-      print "Initializing a new instance of LEDBackpack at 0x%02X" % address
+      print("Initializing a new instance of LEDBackpack at 0x%02X" % address)
     self.disp = LEDBackpack(address=address, debug=debug)
 
   def writeRowRaw(self, charNumber, value):

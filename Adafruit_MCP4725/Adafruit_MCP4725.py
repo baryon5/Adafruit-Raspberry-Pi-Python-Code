@@ -26,7 +26,7 @@ class MCP4725 :
     if (voltage < 0):
       voltage = 0
     if (self.debug):
-      print "Setting voltage to %04d" % voltage
+      print("Setting voltage to %04d" % voltage)
     # Value needs to be left-shifted four bytes for the MCP4725
     bytes = [(voltage >> 4) & 0xFF, (voltage << 4) & 0xFF]
     if (persist):
